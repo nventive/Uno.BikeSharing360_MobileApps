@@ -5,7 +5,6 @@
              xmlns:ctrl="clr-namespace:BikeSharing.Clients.Core.Controls;assembly=BikeSharing.Clients.Core"
              xmlns:animations="clr-namespace:BikeSharing.Clients.Core.Animations;assembly=BikeSharing.Clients.Core"
              xmlns:triggers="clr-namespace:BikeSharing.Clients.Core.Triggers;assembly=BikeSharing.Clients.Core"
-             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              Title="Profile">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -35,9 +34,9 @@
     </ContentPage.Effects>
     <Grid 
         BackgroundColor="{StaticResource BackgroundGrayColor}">
-        <ffimageloading:CachedImage 
+        <!--<ffimageloading:CachedImage 
             Source="bg_profile.png"     
-            Aspect="AspectFill"/>
+            Aspect="AspectFill"/>-->
         <ScrollView>
             <Grid>
                 <Grid

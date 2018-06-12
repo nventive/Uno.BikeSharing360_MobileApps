@@ -1,5 +1,5 @@
-using Plugin.Settings;
-using Plugin.Settings.Abstractions;
+//using Plugin.Settings;
+//using Plugin.Settings.Abstractions;
 
 namespace BikeSharing.Clients.Core.Helpers
 {
@@ -10,13 +10,13 @@ namespace BikeSharing.Clients.Core.Helpers
     /// </summary>
     public static class Settings
     {
-        private static ISettings AppSettings
-        {
-            get
-            {
-                return CrossSettings.Current;
-            }
-        }
+        //private static ISettings AppSettings
+        //{
+        //    get
+        //    {
+        //        return CrossSettings.Current;
+        //    }
+        //}
 
         #region Setting Constants
 
@@ -37,84 +37,33 @@ namespace BikeSharing.Clients.Core.Helpers
 
         #endregion
 
-        public static int UserId
-        {
-            get
-            {
-                return AppSettings.GetValueOrDefault(UserIdKey, UserIdDefault);
-            }
-            set
-            {
-                AppSettings.AddOrUpdateValue(UserIdKey, value);
-            }
-        }
+        public static int UserId { get; set; }
 
-        public static int ProfileId
-        {
-            get
-            {
-                return AppSettings.GetValueOrDefault(ProfileIdKey, ProfileIdDefault);
-            }
-            set
-            {
-                AppSettings.AddOrUpdateValue(ProfileIdKey, value);
-            }
-        }
+        public static int ProfileId { get; set; }
 
-        public static string AccessToken
-        {
-            get
-            {
-                return AppSettings.GetValueOrDefault(AccessTokenKey, AccessTokenDefault);
-            }
-            set
-            {
-                AppSettings.AddOrUpdateValue(AccessTokenKey, value);
-            }
-        }
+		public static string AccessToken { get; set; }
 
-        public static int CurrentBookingId
-        {
-            get
-            {
-                return AppSettings.GetValueOrDefault(CurrentBookingIdKey, CurrentBookingIdDefault);
-            }
-            set
-            {
-                AppSettings.AddOrUpdateValue(CurrentBookingIdKey, value);
-            }
-        }
+		public static int CurrentBookingId { get; set; }
 
-        public static string UwpWindowSize
-        {
-            get
-            {
-                return AppSettings.GetValueOrDefault(UwpWindowSizeKey, UwpWindowSizeDefault);
-            }
-            set
-            {
-                AppSettings.AddOrUpdateValue(UwpWindowSizeKey, value);
-            }
-        }
+		public static string UwpWindowSize { get; set; }
 
-        public static void RemoveUserId()
+		public static void RemoveUserId()
         {
-            AppSettings.Remove(UserIdKey);
+
         }
 
         public static void RemoveProfileId()
         {
-            AppSettings.Remove(ProfileIdKey);
+
         }
 
         public static void RemoveAccessToken()
         {
-            AppSettings.Remove(AccessTokenKey);
+
         }
 
         public static void RemoveCurrentBookingId()
         {
-            AppSettings.Remove(CurrentBookingIdKey);
         }
     }
 }

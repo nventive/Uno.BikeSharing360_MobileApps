@@ -231,9 +231,10 @@ namespace BikeSharing.Clients.Core.ViewModels
                 SelectedPin = customPin;
             }
 
-            return _stations
-                .FirstOrDefault(s => s.Latitude == customPin.Position.Latitude &&
-                s.Longitude == customPin.Position.Longitude);
+			return null;
+			//_stations
+   //             .FirstOrDefault(s => s.Latitude == customPin.Position.Latitude &&
+   //             s.Longitude == customPin.Position.Longitude);
         }
 
         private async void Go()
@@ -331,7 +332,7 @@ namespace BikeSharing.Clients.Core.ViewModels
                         PinIcon = "pushpin",
                         Label = station.Name,
                         Address = string.Format("{0}, {1}", station.Latitude, station.Longitude),
-                        Position = new Xamarin.Forms.Maps.Position(station.Latitude, station.Longitude)
+                        // Position = new Xamarin.Forms.Maps.Position(station.Latitude, station.Longitude)
                     });
 
                     counter++;

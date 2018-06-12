@@ -1,5 +1,5 @@
 ﻿using BikeSharing.Clients.Core.Models;
-using Xamarin.Forms.Maps;
+//using Xamarin.Forms.Maps;
 
 namespace BikeSharing.Clients.Core.Utils
 {
@@ -11,17 +11,17 @@ namespace BikeSharing.Clients.Core.Utils
             Longitude = -122.335167
         };
 
-        public static void CenterMapInDefaultLocation(Map map)
-        {
-            var initialPosition = new Position(
-                DefaultLocation.Latitude,
-                DefaultLocation.Longitude);
+        //public static void CenterMapInDefaultLocation(Map map)
+        //{
+        //    var initialPosition = new Position(
+        //        DefaultLocation.Latitude,
+        //        DefaultLocation.Longitude);
 
-            var mapSpan = MapSpan.FromCenterAndRadius(
-                initialPosition,
-                Distance.FromMiles(1.0));
+        //    var mapSpan = MapSpan.FromCenterAndRadius(
+        //        initialPosition,
+        //        Distance.FromMiles(1.0));
 
-            map.MoveToRegion(mapSpan);
-        }
+        //    map.MoveToRegion(mapSpan);
+        //}
     }
 }

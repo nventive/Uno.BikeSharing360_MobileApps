@@ -84,14 +84,16 @@
         </EventTrigger>
     </ContentPage.Triggers>
     <Grid>
-        <ffimageloading:CachedImage 
+		<Image x:Name="EventBackground"
+            Aspect="AspectFill"  />
+		<!--<ffimageloading:CachedImage 
             x:Name="EventBackground"
             CacheType="Disk"
             CacheDuration="30"
             DownsampleToViewSize="True"
             Aspect="AspectFill"  />
         <ffimageloading:CachedImage 
-            Style="{StaticResource OverlayStyle}" />
+            Style="{StaticResource OverlayStyle}" />-->
         <ScrollView x:Name="MainScrollView" Padding="0">
             <StackLayout 
                 Padding="5, 15, 5, 5"   

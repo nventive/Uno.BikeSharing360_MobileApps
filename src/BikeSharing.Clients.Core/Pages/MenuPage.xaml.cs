@@ -1,4 +1,6 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using System.Windows.Input;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace BikeSharing.Clients.Core.Pages
@@ -18,4 +20,5 @@ namespace BikeSharing.Clients.Core.Pages
             //LogoutButton.Margin = Device.Idiom == TargetIdiom.Desktop ? new Thickness(14, 0, 0, 0) : new Thickness(14, 0, 0, 14);
         }
     }
+
 }

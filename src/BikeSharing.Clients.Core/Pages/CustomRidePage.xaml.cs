@@ -13,7 +13,7 @@ namespace BikeSharing.Clients.Core.Pages
             InitializeComponent();
             InitializePlatformSpecifics();
 
-            DemoHelper.CenterMapInDefaultLocation(Map);
+           // DemoHelper.CenterMapInDefaultLocation(Map);
         }
 
         protected override void OnAppearing()

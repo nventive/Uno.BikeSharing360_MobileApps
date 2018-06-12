@@ -1,5 +1,5 @@
-﻿using FFImageLoading.Cache;
-using FFImageLoading.Forms;
+﻿//using FFImageLoading.Cache;
+//using FFImageLoading.Forms;
 using System.Threading.Tasks;
 
 namespace BikeSharing.Clients.Core.Helpers
@@ -8,7 +8,7 @@ namespace BikeSharing.Clients.Core.Helpers
     {
         public static async Task RemoveFromCache(string url)
         {
-            await CachedImage.InvalidateCache(url, CacheType.All, true);
+           //  await CachedImage.InvalidateCache(url, CacheType.All, true);
         }
     }
 }

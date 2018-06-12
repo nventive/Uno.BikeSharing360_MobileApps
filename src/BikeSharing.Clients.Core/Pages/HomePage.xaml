@@ -117,23 +117,28 @@
         <eff:ContentPageTitleFontEffect />
     </ContentPage.Effects>
     <Grid>
-        <Grid.BackgroundColor>
-            <OnPlatform
-                x:TypeArguments="Color" 
-                WinPhone="{StaticResource BackgroundGrayColor}"/>
-        </Grid.BackgroundColor>
         <ScrollView 
             x:Name="mainScrollView">
             <StackLayout 
                 Orientation="Vertical">
                 <Grid>
-                      <ffimageloading:CachedImage Aspect="AspectFill">
+					<Image Aspect="AspectFill">
+						<Image.Source>
+                            <OnPlatform 
+                                x:TypeArguments="ImageSource"
+                                WinPhone="Assets/bg_header_mdpi.png"/>
+						</Image.Source>
+					</Image>
+
+                      <!--
+					<ffimageloading:CachedImage Aspect="AspectFill">
                         <ffimageloading:CachedImage.Source>
                             <OnPlatform 
                                 x:TypeArguments="ImageSource"
                                 WinPhone="bg_header_mdpi.png"/>
                         </ffimageloading:CachedImage.Source>
                     </ffimageloading:CachedImage>
+					-->
                     <StackLayout 
                         x:Name="infoPanel"   
                         Opacity="0"
@@ -141,18 +146,20 @@
                         AnchorY="1"
                         VerticalOptions="End">
                         <StackLayout.Margin>
-                            <OnPlatform 
+                            <helpers:OnCustomPlatform 
                                 x:TypeArguments="Thickness" 
                                 Android="16, 73, 0, 0"
                                 iOS="16, 53, 0, 0" 
-                                WinPhone="16, 73, 0, 0"/>
+                                WinPhone="16, 73, 0, 0"
+                                Windows="16, 73, 0, 0"/>
                         </StackLayout.Margin>
                         <StackLayout.HeightRequest>
-                            <OnPlatform
+                            <helpers:OnCustomPlatform
                                 x:TypeArguments="x:Double" 
                                 Android="105"
                                 iOS="85" 
-                                WinPhone="105"/>
+                                WinPhone="105"
+                                Windows="105"/>
                         </StackLayout.HeightRequest>
                         <Label Text="{Binding CurrentDate, Converter={StaticResource DateTimeConverter}}"
                                Style="{StaticResource HeaderLabelStyle}" />
@@ -210,7 +217,24 @@
                                             Windows="300"/>
                                     </Grid.WidthRequest>
                                     <AbsoluteLayout>
-                                        <ffimageloading:CachedImage 
+										<Image Source="Assets/placeholder_240x170.png"
+											   Aspect="AspectFill" 
+											   AbsoluteLayout.LayoutFlags="All" 
+											   AbsoluteLayout.LayoutBounds="0, 0, 1.0, 1.0">
+										</Image>
+										<Image Source="{Binding ImagePath}"
+											   Aspect="AspectFill" 
+											   AbsoluteLayout.LayoutFlags="All" 
+											   AbsoluteLayout.LayoutBounds="0, 0, 1.0, 1.0">
+										</Image>
+										<Image Source="Assets/event_overlay.png"
+											   Aspect="AspectFill"
+											   AbsoluteLayout.LayoutFlags="All"
+											   Opacity="0.8"
+											   AbsoluteLayout.LayoutBounds="0, 0, 1.0, 1.0">
+										</Image>
+
+										<!--<ffimageloading:CachedImage 
                                             Source="{Binding ImagePath}" 
                                             CacheType="Disk"
                                             CacheDuration="30"
@@ -230,7 +254,7 @@
                                         <ffimageloading:CachedImage 
                                            Style="{StaticResource OverlayStyle}"
                                            AbsoluteLayout.LayoutFlags="All" 
-                                           AbsoluteLayout.LayoutBounds="0, 0, 1.0, 1.0" />
+                                           AbsoluteLayout.LayoutBounds="0, 0, 1.0, 1.0" />-->
                                     </AbsoluteLayout>
                                     <StackLayout 
                                         Padding="15, 15, 40, 15">
@@ -288,7 +312,18 @@
                                             Windows="160"/>
                                     </Grid.HeightRequest>
                                     <AbsoluteLayout>
-                                        <ffimageloading:CachedImage 
+										<Image Source="{Binding ImagePath}"
+											   Aspect="AspectFill" 
+											   AbsoluteLayout.LayoutFlags="All" 
+											   AbsoluteLayout.LayoutBounds="0, 0, 1.0, 1.0">
+										</Image>
+										<Image Source="Assets/event_overlay.png"
+											   Aspect="AspectFill" 
+											   AbsoluteLayout.LayoutFlags="All" 
+											   Opacity="0.8"
+											   AbsoluteLayout.LayoutBounds="0, 0, 1.0, 1.0">
+										</Image>
+                                        <!--<ffimageloading:CachedImage 
                                             Source="{Binding ImagePath}" 
                                             Aspect="AspectFill"
                                             CacheDuration="30"
@@ -308,7 +343,7 @@
                                         <ffimageloading:CachedImage 
                                            Style="{StaticResource OverlayStyle}"
                                            AbsoluteLayout.LayoutFlags="All" 
-                                           AbsoluteLayout.LayoutBounds="0, 0, 1.0, 1.0" />
+                                           AbsoluteLayout.LayoutBounds="0, 0, 1.0, 1.0" />-->
                                     </AbsoluteLayout>
                                     <Grid
                                         Padding="15, 10"
@@ -352,10 +387,11 @@
                                                     </ColumnDefinition>
                                                     <ColumnDefinition />
                                                 </Grid.ColumnDefinitions>
-                                                <ffimageloading:CachedImage 
-                                                    Grid.Column="0" 
-                                                    Source="ic_distance_white.png" 
-                                                    Aspect="AspectFit" />
+												<Image  Grid.Column="0"
+														Source="Assets/ic_distance_white.png"
+														Aspect="AspectFit" />
+												<!--<ffimageloading:CachedImage 
+                                                     />-->
                                                 <Label
                                                     Grid.Column="1" 
                                                     Text="{Binding Distance, Converter={StaticResource MetersToMilesConverter}, StringFormat='{0:N2} miles'}"

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("BikeSharing.Clients.Windows")]
+[assembly: AssemblyTitle("BikeSharing.Clients.UWP")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("BikeSharing.Clients.Windows")]
+[assembly: AssemblyProduct("BikeSharing.Clients.UWP")]
 [assembly: AssemblyCopyright("Copyright © BikeRider 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -1,5 +1,6 @@
 ﻿using BikeSharing.Clients.Core.DataServices;
 using BikeSharing.Clients.Core.DataServices.Base;
+using BikeSharing.Clients.Core.DataServices.Fake;
 using BikeSharing.Clients.Core.DataServices.Interfaces;
 using BikeSharing.Clients.Core.Services;
 using BikeSharing.Clients.Core.Services.Interfaces;
@@ -37,10 +38,10 @@ namespace BikeSharing.Clients.Core.ViewModels.Base
             RegisterSingleton<INavigationService, NavigationService>();
 
             // Data services
-            _unityContainer.RegisterType<IAuthenticationService, AuthenticationService>();
-            _unityContainer.RegisterType<IProfileService, ProfileService>();
-            _unityContainer.RegisterType<IRidesService, RidesService>();
-            _unityContainer.RegisterType<IEventsService, EventsService>();
+            _unityContainer.RegisterType<IAuthenticationService, FakeAuthenticationService>();
+            _unityContainer.RegisterType<IProfileService, FakeProfileService>();
+            _unityContainer.RegisterType<IRidesService, FakeRidesService>();
+            _unityContainer.RegisterType<IEventsService, FakeEventsService>();
             _unityContainer.RegisterType<IWeatherService, OpenWeatherMapService>();
             _unityContainer.RegisterType<IFeedbackService, FeedbackService>();
 

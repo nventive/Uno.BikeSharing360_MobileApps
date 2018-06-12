@@ -17,7 +17,7 @@
 
         public string PinIcon { get; set; }
 
-        public Xamarin.Forms.Maps.Position Position { get; set; }
+        //public Xamarin.Forms.Maps.Position Position { get; set; }
 
         public AnnotationType Type { get; set; }
 

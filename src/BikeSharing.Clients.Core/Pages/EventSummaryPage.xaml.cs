@@ -17,6 +17,7 @@ namespace BikeSharing.Clients.Core.Pages
 
 			if (@event != null)
 			{
+				Console.WriteLine("EventSummaryImage=" + @event.ImagePath);
 				// assign background before page appears to 
 				// avoid image replacing during navigation
 				EventBackground.Source = @event.ImagePath;

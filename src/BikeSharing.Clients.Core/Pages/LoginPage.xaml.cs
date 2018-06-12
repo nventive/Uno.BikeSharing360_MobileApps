@@ -15,6 +15,7 @@ namespace BikeSharing.Clients.Core.Pages
 
         protected override void OnBindingContextChanged()
         {
+			System.Console.WriteLine("LoginPage.OnBindingContextChanged()");
             base.OnBindingContextChanged();
         }
 
@@ -27,7 +28,7 @@ namespace BikeSharing.Clients.Core.Pages
 
 			if (Device.OS == TargetPlatform.iOS && osVersionString == "10.0.2")
 			{
-				SignInButton.BackgroundColor = Color.Black;
+				// SignInButton.BackgroundColor = Color.Black;
 			}
 		}
     }

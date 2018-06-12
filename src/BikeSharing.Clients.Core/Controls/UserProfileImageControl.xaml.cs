@@ -1,5 +1,4 @@
-﻿using FFImageLoading.Transformations;
-using System;
+﻿using System;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -47,16 +46,16 @@ namespace BikeSharing.Clients.Core.Controls
 
         private void SetImageBorder(string borderColor)
         {
-            var transformation = new CircleTransformation
-            {
-                BorderHexColor = borderColor
-            };
+            //var transformation = new CircleTransformation
+            //{
+            //    BorderHexColor = borderColor
+            //};
 
-            Device.OnPlatform(
-                iOS: () => transformation.BorderSize = 30,
-                Default: () => transformation.BorderSize = 20);
+            //Device.OnPlatform(
+            //    iOS: () => transformation.BorderSize = 30,
+            //    Default: () => transformation.BorderSize = 20);
 
-            Photo.Transformations.Add(transformation);
+            //Photo.Transformations.Add(transformation);
         }
     }
 }

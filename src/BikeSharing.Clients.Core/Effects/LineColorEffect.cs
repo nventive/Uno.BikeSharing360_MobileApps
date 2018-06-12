@@ -32,7 +32,7 @@ namespace BikeSharing.Clients.Core.Effects
             if (hasShadow)
             {
                 view.Effects.Add(new EntryLineColorEffect());
-                view.Effects.Add(new DatePickerLineColorEffect());
+                // view.Effects.Add(new DatePickerLineColorEffect());
                 view.Effects.Add(new PickerLineColorEffect());
             }
             else

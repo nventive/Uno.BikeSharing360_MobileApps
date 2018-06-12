@@ -5,7 +5,7 @@
       xmlns:transformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
       x:Class="BikeSharing.Clients.Core.Controls.UserProfileImageControl"
       x:Name="Control">
-    <ffimageloading:CachedImage
+    <!--<ffimageloading:CachedImage
             x:Name="Photo"
             Source="{Binding ProfileImage, Source={x:Reference Control}}"
             Aspect="AspectFit"
@@ -42,5 +42,5 @@
         <ffimageloading:CachedImage.GestureRecognizers>
             <TapGestureRecognizer Command="{Binding UpdatePhotoCommand, Source={x:Reference Control}}" />
         </ffimageloading:CachedImage.GestureRecognizers>
-    </ffimageloading:CachedImage>
+    </ffimageloading:CachedImage>-->
 </Grid>

@@ -36,7 +36,7 @@ namespace BikeSharing.Clients.Core.ViewModels
             }
         }
 
-        string location = "-";
+        string location = "Redmond";
 
         public string Location
         {
@@ -52,7 +52,7 @@ namespace BikeSharing.Clients.Core.ViewModels
             }
         }
 
-        string temp = "-";
+        string temp = "80";
 
         public string Temp
         {

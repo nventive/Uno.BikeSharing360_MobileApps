@@ -262,7 +262,7 @@ namespace BikeSharing.Clients.Core.ViewModels
                     Type = AnnotationType.From,
                     Label = selectedRide.FromStation.Name,
                     Address = string.Format("{0}, {1}", selectedRide.FromStation.Latitude, selectedRide.FromStation.Longitude),
-                    Position = new Xamarin.Forms.Maps.Position(selectedRide.FromStation.Latitude, selectedRide.FromStation.Longitude)
+                    //Position = new Xamarin.Forms.Maps.Position(selectedRide.FromStation.Latitude, selectedRide.FromStation.Longitude)
                 };
 
                 tempCustomPins.Add(fromPin);
@@ -273,7 +273,7 @@ namespace BikeSharing.Clients.Core.ViewModels
                     Type = AnnotationType.To,
                     Label = selectedRide.ToStation.Name,
                     Address = string.Format("{0}, {1}", selectedRide.ToStation.Latitude, selectedRide.ToStation.Longitude),
-                    Position = new Xamarin.Forms.Maps.Position(selectedRide.ToStation.Latitude, selectedRide.ToStation.Longitude)
+                    // Position = new Xamarin.Forms.Maps.Position(selectedRide.ToStation.Latitude, selectedRide.ToStation.Longitude)
                 };
 
                 tempCustomPins.Add(toPin);

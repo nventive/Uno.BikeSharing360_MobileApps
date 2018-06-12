@@ -6,7 +6,6 @@
              xmlns:ride="clr-namespace:BikeSharing.Clients.Core.Controls.Rides"
              xmlns:animations="clr-namespace:BikeSharing.Clients.Core.Animations;assembly=BikeSharing.Clients.Core"
              xmlns:triggers="clr-namespace:BikeSharing.Clients.Core.Triggers;assembly=BikeSharing.Clients.Core"
-             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:templates="clr-namespace:BikeSharing.Clients.Core.TemplateSelectors;assembly=BikeSharing.Clients.Core"
              xmlns:controls="clr-namespace:BikeSharing.Clients.Core.Controls;assembly=BikeSharing.Clients.Core"
              Title="My Rides">
@@ -75,13 +74,13 @@
         <Grid  
             Grid.Row="0"  
             Margin="0">
-            <ffimageloading:CachedImage 
+            <!--<ffimageloading:CachedImage 
                 Aspect="AspectFill">
                 <ffimageloading:CachedImage.Source>
                     <OnPlatform x:TypeArguments="ImageSource"
                                 WinPhone="bg_header_mdpi.png"/>
                 </ffimageloading:CachedImage.Source>
-            </ffimageloading:CachedImage>
+            </ffimageloading:CachedImage>-->
             <StackLayout 
                 x:Name="infoPanel"          
                 AnchorX="0"
@@ -140,7 +139,7 @@
                 Margin="0">
                 <AbsoluteLayout>
                     <!-- MAP -->
-                    <controls:CustomMap     
+                    <!--<controls:CustomMap     
                         x:Name="Map"
                         AbsoluteLayout.LayoutFlags="All"
                         AbsoluteLayout.LayoutBounds="0, 0, 1.0, 1.0" 
@@ -148,7 +147,7 @@
                         SelectedPin="{Binding SelectedPin, Mode=TwoWay}"
                         From="{Binding From, Mode=TwoWay}"
                         To="{Binding To, Mode=TwoWay}">
-                    </controls:CustomMap>
+                    </controls:CustomMap>-->
                 </AbsoluteLayout>
             </Grid>
             <!-- DETAIL -->

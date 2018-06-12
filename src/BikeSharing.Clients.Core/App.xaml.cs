@@ -15,7 +15,7 @@ namespace BikeSharing.Clients.Core
 
             AdaptColorsToHexString();
 
-            if(Device.OS == TargetPlatform.Windows)
+            // if(Device.OS == TargetPlatform.Windows)
             {
                 InitNavigation();
             }
@@ -35,9 +35,9 @@ namespace BikeSharing.Clients.Core
         {
             var navigationService = ViewModelLocator.Instance.Resolve<INavigationService>();
             return navigationService.InitializeAsync();
-        }
+		}
 
-        private void AdaptColorsToHexString()
+		private void AdaptColorsToHexString()
         {
             for (var i = 0; i < this.Resources.Count; i++)
             {

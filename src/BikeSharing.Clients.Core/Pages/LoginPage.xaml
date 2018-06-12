@@ -4,8 +4,9 @@
              xmlns:effects="clr-namespace:BikeSharing.Clients.Core.Effects;assembly=BikeSharing.Clients.Core"
              xmlns:helpers="clr-namespace:BikeSharing.Clients.Core.Helpers;assembly=BikeSharing.Clients.Core"
              x:Class="BikeSharing.Clients.Core.Pages.LoginPage"
-             xmlns:windows="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows">
-    <ContentPage.Resources>
+             xmlns:windows="clr-namespace:Windows.UI.Xaml.Controls;assembly=Uno.UI, Version=255.255.255.255, Culture=neutral">
+              <!--xmlns:windows="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows">-->
+   <ContentPage.Resources>
         <ResourceDictionary>
 
             <Style x:Key="ForgotPwdLabelStyle"
@@ -52,13 +53,8 @@
 
         </ResourceDictionary>
     </ContentPage.Resources>
-    <Grid>
-        <Image Aspect="AspectFill">
-            <Image.Source>
-                <OnPlatform 
-                    x:TypeArguments="ImageSource"
-                    WinPhone="Assets\Uwp_LoginBackground.png"/>
-            </Image.Source>
+    <Grid BackgroundColor="Black">
+        <Image Aspect="AspectFill" Source="Assets/Uwp_LoginBackground.png">
         </Image>
         <Grid>
             <Grid.Padding>

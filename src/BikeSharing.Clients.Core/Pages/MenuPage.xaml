@@ -5,7 +5,7 @@
              xmlns:behaviors="clr-namespace:BikeSharing.Clients.Core.Behaviors;assembly=BikeSharing.Clients.Core"
              xmlns:controls="clr-namespace:BikeSharing.Clients.Core.Controls;assembly=BikeSharing.Clients.Core"
              xmlns:helpers="clr-namespace:BikeSharing.Clients.Core.Helpers;assembly=BikeSharing.Clients.Core"
-             xmlns:windows="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
+             xmlns:windows="clr-namespace:Windows.UI.Xaml.Controls;assembly=Uno.UI, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null"
              x:Class="BikeSharing.Clients.Core.Pages.MenuPage">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -101,15 +101,15 @@
             <!-- BACKGROUND -->
             <Image
                 Grid.Row="0"
-                Grid.RowSpan="5">
-                <Image.Source>
+                Grid.RowSpan="5" Source="Assets/menu_bg_desktop.png">
+                <!--<Image.Source>
                     <helpers:OnCustomPlatform 
                         x:TypeArguments="ImageSource"
-                        Android="menu_bg.png"
-                        iOS="menu_bg.png"
-                        WinPhone="Assets\menu_bg_desktop.png"
-                        Windows="Assets\menu_bg_desktop.png"/>
-                </Image.Source>
+                        Android="Assets/menu_bg.png"
+                        iOS="Assets/menu_bg.png"
+                        WinPhone="Assets/menu_bg_desktop.png"
+                        Windows="Assets/menu_bg_desktop.png"/>
+                </Image.Source>-->
                 <Image.Aspect>
                     <helpers:OnCustomPlatform  
                         x:TypeArguments="Aspect"
@@ -179,12 +179,12 @@
                 Grid.Row="2"
                 x:Name="Items" 
                 CachingStrategy="RecycleElement"
-                ItemsSource="{Binding MenuItems, Mode=OneWay}"
+                ItemsSource="{Binding MenuItems, Mode=OneWa}"
                 behaviors:ItemTappedCommandListView.ItemTappedCommand="{Binding ItemSelectedCommand}"
                 SeparatorVisibility="None"
                 VerticalOptions="StartAndExpand"
                 Margin="0,5,0,0">
-                <ListView.Margin>
+				<ListView.Margin>
                     <helpers:OnCustomPlatform 
                         x:TypeArguments="Thickness"
                         Android="0,5,0,0"
