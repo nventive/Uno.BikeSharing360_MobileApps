@@ -7,14 +7,12 @@
 		<DefineConstants>$(DefineConstants);__WASM__</DefineConstants>
 		<NoWarn>NU1701</NoWarn>
 		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-		<MonoWasmSDKUri>https://jenkins.mono-project.com/view/All/job/test-mono-mainline-wasm/319/label=ubuntu-1804-amd64/Azure/processDownloadRequest/319/ubuntu-1804-amd64/sdks/wasm/mono-wasm-8ecf04ff485.zip</MonoWasmSDKUri>
-		<RuntimeConfiguration>debug</RuntimeConfiguration>
 		<EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Uno.UI" Version="1.31.0-dev.8" />
-		<PackageReference Include="Uno.Wasm.Bootstrap" Version="1.0.0-dev.17" />
+		<PackageReference Include="Uno.Xamarin.Forms" Version="3.1.2-uno.40" />
+		<PackageReference Include="Uno.Wasm.Bootstrap" Version="1.0.0-dev.32" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.1.1" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Filter" Version="1.1.1" />
 	</ItemGroup>
@@ -41,23 +39,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Xamarin.Forms" Version="3.0.0.446417" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\src\BikeSharing.Clients.Core\BikeSharing.Clients.Core.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Reference Include="Xamarin.Forms.Core">
-			<HintPath>..\..\..\..\Xamarin.Forms\Xamarin.Forms.Platform.UAP\bin\Debug\netstandard2.0\Xamarin.Forms.Core.dll</HintPath>
-		</Reference>
-		<Reference Include="Xamarin.Forms.Platform">
-			<HintPath>..\..\..\..\Xamarin.Forms\Xamarin.Forms.Platform.UAP\bin\Debug\netstandard2.0\Xamarin.Forms.Platform.dll</HintPath>
-		</Reference>
-		<Reference Include="Xamarin.Forms.Platform.UAP">
-			<HintPath>..\..\..\..\Xamarin.Forms\Xamarin.Forms.Platform.UAP\bin\Debug\netstandard2.0\Xamarin.Forms.Platform.UAP.dll</HintPath>
-		</Reference>
+	  <ProjectReference Include="..\BikeSharing.Clients.Core\BikeSharing.Clients.Core.csproj" />
 	</ItemGroup>
 
 	<Import Project="..\BikeSharing.Client.Shared\BikeSharing.Client.Shared.projitems" Label="Shared" />

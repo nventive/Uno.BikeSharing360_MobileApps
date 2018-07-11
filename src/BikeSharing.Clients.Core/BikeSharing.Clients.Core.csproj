@@ -13,25 +13,8 @@
 	<ItemGroup>
 		<PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
 		<PackageReference Include="Unity" Version="4.0.1" />
-		<!--<PackageReference Include="Xamarin.Forms" Version="3.0.0.446417" />-->
+		<PackageReference Include="Uno.Xamarin.Forms" Version="3.1.2-uno.40" />
 	</ItemGroup>
-
-	<ItemGroup>
-		<Reference Include="Xamarin.Forms.Platform.UAP">
-			<HintPath>..\..\..\..\Xamarin.Forms\Xamarin.Forms.Platform.UAP\bin\Debug\$(TargetFramework)\Xamarin.Forms.Platform.UAP.dll</HintPath>
-		</Reference>
-		<Reference Include="Xamarin.Forms.Platform">
-			<HintPath>..\..\..\..\Xamarin.Forms\Xamarin.Forms.Platform.UAP\bin\Debug\$(TargetFramework)\Xamarin.Forms.Platform.dll</HintPath>
-		</Reference>
-		<Reference Include="Xamarin.Forms.Core">
-			<HintPath>..\..\..\..\Xamarin.Forms\Xamarin.Forms.Platform.UAP\bin\Debug\$(TargetFramework)\Xamarin.Forms.Core.dll</HintPath>
-		</Reference>
-		<Reference Include="Xamarin.Forms.Xaml">
-			<HintPath>..\..\..\..\Xamarin.Forms\Xamarin.Forms.Xaml\bin\Debug\netstandard2.0\Xamarin.Forms.Xaml.dll</HintPath>
-		</Reference>
-	</ItemGroup>
-	<Import Project="C:\Users\jerome.laban\.nuget\packages\xamarin.forms\3.0.0.550146\build\netstandard2.0\Xamarin.Forms.props" />
-	<Import Project="C:\Users\jerome.laban\.nuget\packages\xamarin.forms\3.0.0.550146\build\netstandard2.0\Xamarin.Forms.targets" />
 
 	<Import Project="$(MSBuildSDKExtrasTargets)" Condition="Exists('$(MSBuildSDKExtrasTargets)')" />
 

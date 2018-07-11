@@ -179,7 +179,7 @@
                 Grid.Row="2"
                 x:Name="Items" 
                 CachingStrategy="RecycleElement"
-                ItemsSource="{Binding MenuItems, Mode=OneWa}"
+                ItemsSource="{Binding MenuItems, Mode=OneWay}"
                 behaviors:ItemTappedCommandListView.ItemTappedCommand="{Binding ItemSelectedCommand}"
                 SeparatorVisibility="None"
                 VerticalOptions="StartAndExpand"

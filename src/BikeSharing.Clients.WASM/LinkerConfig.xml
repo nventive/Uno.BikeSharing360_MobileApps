@@ -5,9 +5,6 @@
 	<assembly fullname="Xamarin.Forms.Core">
 		<type fullname="*" />
 	</assembly>
-	<assembly fullname="Xamarin.Forms.Platform">
-		<type fullname="*" />
-	</assembly>
 	<assembly fullname="Xamarin.Forms.Platform.UAP">
 		<type fullname="*" />
 	</assembly>

@@ -86,27 +86,13 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Uno.UI" Version="1.31.0-dev.8" />
+    <PackageReference Include="Uno.UI">
+      <Version>1.31.0-dev.161</Version>
+    </PackageReference>
+    <PackageReference Include="Uno.Xamarin.Forms" Version="3.1.2-uno.40" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.1.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Filter" Version="1.1.1" />
   </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Xamarin.Forms.Core">
-      <HintPath>..\..\..\Xamarin.Forms\Xamarin.Forms.Platform.UAP\bin\Debug\xamarinios10\Xamarin.Forms.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Platform">
-      <HintPath>..\..\..\Xamarin.Forms\Xamarin.Forms.Platform.UAP\bin\Debug\xamarinios10\Xamarin.Forms.Platform.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Platform.UAP">
-      <HintPath>..\..\..\Xamarin.Forms\Xamarin.Forms.Platform.UAP\bin\Debug\xamarinios10\Xamarin.Forms.Platform.UAP.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Xaml">
-      <HintPath>..\..\..\Xamarin.Forms\Xamarin.Forms.Xaml\bin\Debug\netstandard2.0\Xamarin.Forms.Xaml.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <Import Project="C:\Users\jerome.laban\.nuget\packages\xamarin.forms\3.0.0.550146\build\netstandard2.0\Xamarin.Forms.props" />
-  <Import Project="C:\Users\jerome.laban\.nuget\packages\xamarin.forms\3.0.0.550146\build\netstandard2.0\Xamarin.Forms.targets" />
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\BikeSharing.Clients.Core\BikeSharing.Clients.Core.csproj">
       <Project>{89c9b6f2-1cd6-4a98-9ccc-eefb7ddbf6fa}</Project>
