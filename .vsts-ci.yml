@@ -1,0 +1,43 @@
+phases:
+- phase: VS_Latest
+  variables:
+    NUGET_PACKAGES: $(Agent.WorkFolder)\.nuget
+    NUGET_HTTP_CACHE_PATH: $(Agent.WorkFolder)\.nuget-http-cache
+
+  steps:
+  - task: GitVersion@3
+    inputs:
+      updateAssemblyInfo: false   
+      
+  - task: NuGetToolInstaller@0
+    inputs:
+        versionSpec: 4.7.0
+        checkLatest: false
+
+  - task: NuGetCommand@2
+    inputs:
+      command: restore
+      solution: BikeSharing.Xamarin-UWP.sln
+      selectOrConfig: select
+      includeNuGetOrg: true
+      verbosityRestore: Normal
+
+  - task: MSBuild@1
+    inputs:
+      solution: BikeSharing.Xamarin-UWP.sln
+      msbuildLocationMethod: version
+      msbuildVersion: latest
+      msbuildArchitecture: x86
+      msbuildArguments: /r /p:Configuration=Release "/p:PackageVersion=%GITVERSION_FullSemVer%" "/p:InformationalVersion=%GITVERSION_InformationalVersion%" /detailedsummary
+      clean: false
+      maximumCpuCount: true
+      restoreNugetPackages: false
+      logProjectEvents: false
+      createLogFile: false
+
+  - task: PublishBuildArtifacts@1
+    displayName: Publish Wasm Artifacts
+    inputs:
+      pathToPublish: .\src\BikeSharing.Clients.WASM\bin\Release\netstandard2.0\dist
+      artifactType: container
+      artifactName: BikeSharing-Wasm
