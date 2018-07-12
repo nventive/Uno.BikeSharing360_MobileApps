@@ -19,8 +19,8 @@ namespace BikeSharing.Clients.Core.DataServices.Fake
                     Name = "New York Knicks vs. Brooklyn Nets"
                 },
                 StartTime = DateTime.Now,
-                ImagePath = "https://connect16test.blob.core.windows.net/imgs/i_nba-match.png"
-            },
+                ImagePath = "https://i.turner.ncaa.com/ncaa/big/2016/03/21/379123/1458530071096-mbk-312-wisconsin-xavier-1920.jpg-379123.960x540.jpg"
+			},
             new Event
             {
                 Name = "Music Ride",
@@ -29,8 +29,8 @@ namespace BikeSharing.Clients.Core.DataServices.Fake
                     Name = "Green day"
                 },
                 StartTime = DateTime.Now,
-                ImagePath = "https://connect16test.blob.core.windows.net/imgs/i_music-ride.png"
-            }
+                ImagePath = "http://s1.ticketm.net/dam/c/7be/4e1e9428-29ec-401f-aa45-f1577614b7be_105421_TABLET_LANDSCAPE_LARGE_16_9.jpg"
+			}
         };
 
         public Task<Event> GetEventById(int eventId)
