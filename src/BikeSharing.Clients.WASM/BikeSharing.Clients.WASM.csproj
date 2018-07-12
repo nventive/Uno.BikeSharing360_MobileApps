@@ -11,6 +11,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Microsoft.TypeScript.Compiler" Version="2.8.3" />
+		<PackageReference Include="Microsoft.TypeScript.MSBuild" Version="2.8.3" />
 		<PackageReference Include="Uno.Xamarin.Forms" Version="3.1.2-uno.42" />
 		<PackageReference Include="Uno.Wasm.Bootstrap" Version="1.0.0-dev.32" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.1.1" />
@@ -28,10 +30,12 @@
 
 	<ItemGroup>
 	  <None Remove="Fonts\winjs-symbols.woff2" />
+	  <None Remove="tsconfig.json" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <Content Include="Fonts\winjs-symbols.woff2" />
+	  <Content Include="tsconfig.json" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -43,5 +47,13 @@
 	</ItemGroup>
 
 	<Import Project="..\BikeSharing.Client.Shared\BikeSharing.Client.Shared.projitems" Label="Shared" />
+
+	<Target Name="fixupGeneratedJavascript" BeforeTargets="GetTypeScriptOutputForPublishing">
+		<!-- Workaround for Uno.Wasm.Bootstrap picking up files produced by GetTypeScriptOutputForPublishing -->
+		<ItemGroup>
+			<_removedGenerated Include="@(GeneratedJavascript)" />
+			<GeneratedJavascript Remove="@(_removedGenerated)" />
+		</ItemGroup>
+	</Target>
 
 </Project>
