@@ -220,13 +220,13 @@
 				<Label HorizontalOptions="Center"
 					   FontSize="22"
 					   Style="{StaticResource DescriptionLabelStyle}"
-					   Text="This application is running Xamarin.Forms UWP stack over the Uno Platform for WebAssembly" />
+					   Text="This experimental application is running Xamarin.Forms UWP stack over the Uno Platform for WebAssembly" />
 				
 				<Label HorizontalOptions="Center"
 					   FontSize="12"
 					   FontAttributes="Bold" 
 					   Style="{StaticResource DescriptionLabelStyle}"
-					   Text="The Mono runtime is using the interpreted mode (which is currently about 50x slower than it should be), and is best experienced in Microsoft Edge or Chrome"/>
+					   Text="The Mono runtime is using the interpreted mode (which is currently about 50x slower than it should be), and is best experienced in Microsoft Edge or Firefox"/>
 
 				<Label HorizontalOptions="Center"
 					   FontSize="12"

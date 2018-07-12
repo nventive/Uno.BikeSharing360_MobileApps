@@ -1,8 +1,10 @@
 # Uno Port of the BikeSharing 360 Apps for Xamarin Forms over Uno
 
+This is the [Uno Platform-based](http://platform.uno) port of 
+the [Bike Sharing 360 App](https://github.com/Microsoft/BikeSharing360_MobileApps), using the [Uno.Xamarin.Forms](https://github.com/nventive/Uno.Xamarin.Forms)
+port to allow for [Xamarin.Forms](https://github.com/xamarin/Xamarin.Forms) to run in a WebAssembly environment.
 
-
-
+The [BikeSharing.Xamarin-UWP](BikeSharing.Xamarin-UWP.sln) solution contains heads for iOS, Android and WebAssembly platforms.
 
 # BikeSharing360
 
