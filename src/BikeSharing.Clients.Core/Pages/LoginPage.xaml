@@ -39,6 +39,16 @@
                         Value="{StaticResource WhiteColor}" />
             </Style>
 
+            <Style x:Key="DescriptionLabelStyle"
+                   TargetType="{x:Type Label}">
+                <Setter Property="FontFamily"
+                        Value="{StaticResource MontserratRegular}" />
+                <Setter Property="FontSize"
+                        Value="{StaticResource MidMediumSize}" />
+                <Setter Property="TextColor"
+                        Value="{StaticResource WhiteColor}" />
+            </Style>
+
             <Style x:Key="SignUpLabelStyle"
                    TargetType="{x:Type Label}">
                 <Setter Property="FontFamily"
@@ -81,6 +91,7 @@
                             WinPhone="Auto"/>
                     </RowDefinition.Height>
                 </RowDefinition>
+                <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
             <StackLayout Grid.Row="0">
                 <StackLayout.Spacing>
@@ -200,8 +211,73 @@
                         VerticalOptions="Center"
                         Style="{StaticResource SignUpLabelStyle}"/>
                 </Grid>
-            </StackLayout>
-        </Grid>
+
+			</StackLayout>
+			<StackLayout Grid.Row="2"
+						 Orientation="Vertical"
+						 HorizontalOptions="Center">
+
+				<Label HorizontalOptions="Center"
+					   FontSize="22"
+					   Style="{StaticResource DescriptionLabelStyle}"
+					   Text="This application is running Xamarin.Forms UWP stack over the Uno Platform for WebAssembly" />
+				
+				<Label HorizontalOptions="Center"
+					   FontSize="12"
+					   FontAttributes="Bold" 
+					   Style="{StaticResource DescriptionLabelStyle}"
+					   Text="The Mono runtime is using the interpreted mode (which is currently about 50x slower than it should be), and is best experienced in Microsoft Edge or Chrome"/>
+
+				<Label HorizontalOptions="Center"
+					   FontSize="12"
+					   FontAttributes="Italic" 
+					   Style="{StaticResource DescriptionLabelStyle}"
+					   Text="Login using &quot;aaa&quot; (case sensitive) and anything as a password"/>
+
+				<StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+					<Grid
+						HeightRequest="40">
+						<Grid.GestureRecognizers>
+							<TapGestureRecognizer Command="{Binding GoToUnoXamarinForms}" 
+										  NumberOfTapsRequired="1" />
+						</Grid.GestureRecognizers>
+						<Label 
+							Text="Uno.Xamarin.Forms on GitHub"
+							VerticalOptions="Center"
+							Style="{StaticResource SignUpLabelStyle}"/>
+					</Grid>
+					<Label Text=" | " 
+							VerticalOptions="Center"/>
+					<Grid
+						HeightRequest="40">
+						<Grid.GestureRecognizers>
+							<TapGestureRecognizer Command="{Binding GoToUnoPlatform}" 
+										  NumberOfTapsRequired="1" />
+						</Grid.GestureRecognizers>
+						<Label 
+							Text="Uno Platform"
+							VerticalOptions="Center"
+							Style="{StaticResource SignUpLabelStyle}"/>
+					</Grid>
+					<Label Text=" | "
+							VerticalOptions="Center" />
+					<Grid
+						HeightRequest="40">
+						<Grid.GestureRecognizers>
+							<TapGestureRecognizer Command="{Binding GoToRiderRepo}" 
+										  NumberOfTapsRequired="1" />
+						</Grid.GestureRecognizers>
+						<Label 
+							Text="BikeRider GitHub Repo"
+							VerticalOptions="Center"
+							Style="{StaticResource SignUpLabelStyle}"/>
+					</Grid>
+				</StackLayout>
+
+
+			</StackLayout>
+
+		</Grid>
         <ActivityIndicator 
             Color="{StaticResource WhiteColor}"
             IsRunning="{Binding IsBusy}" 

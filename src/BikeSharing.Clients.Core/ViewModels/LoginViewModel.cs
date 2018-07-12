@@ -82,9 +82,13 @@ namespace BikeSharing.Clients.Core.ViewModels
 
         public ICommand SignInCommand => new Command(SignInAsync);
 
-        public ICommand GoToSignUpCommand => new Command(GoToSignUp);
+		public ICommand GoToSignUpCommand => new Command(GoToSignUp);
 
-        public ICommand ValidateCommand
+		public ICommand GoToUnoXamarinForms => new Command(() => Device.OpenUri(new Uri("https://github.com/nventive/Uno.Xamarin.Forms")));
+		public ICommand GoToUnoPlatform => new Command(() => Device.OpenUri(new Uri("https://platform.uno")));
+		public ICommand GoToRiderRepo => new Command(() => Device.OpenUri(new Uri("https://github.com/nventive/Uno.BikeSharing360_MobileApps")));
+
+		public ICommand ValidateCommand
         {
             get { return new Command(() => Enable()); }
         }
