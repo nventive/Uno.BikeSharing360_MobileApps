@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.25807.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29111.141
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BikeSharing.Clients.Core", "src\BikeSharing.Clients.Core\BikeSharing.Clients.Core.csproj", "{89C9B6F2-1CD6-4A98-9CCC-EEFB7DDBF6FA}"
 EndProject
@@ -44,6 +44,8 @@ Global
 		{89C9B6F2-1CD6-4A98-9CCC-EEFB7DDBF6FA}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{89C9B6F2-1CD6-4A98-9CCC-EEFB7DDBF6FA}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{90AF39CC-2364-47DF-B798-A512BF6842D8}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{90AF39CC-2364-47DF-B798-A512BF6842D8}.Debug|Any CPU.Build.0 = Debug|x86
+		{90AF39CC-2364-47DF-B798-A512BF6842D8}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{90AF39CC-2364-47DF-B798-A512BF6842D8}.Debug|iPhone.ActiveCfg = Debug|x86
 		{90AF39CC-2364-47DF-B798-A512BF6842D8}.Debug|iPhoneSimulator.ActiveCfg = Debug|x86
 		{90AF39CC-2364-47DF-B798-A512BF6842D8}.Release|Any CPU.ActiveCfg = Release|x86

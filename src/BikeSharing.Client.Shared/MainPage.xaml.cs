@@ -24,7 +24,7 @@ namespace BikeSharing.Clients.UWP
             ViewModelLocator.Instance.Register<IOperatingSystemVersionProvider, OperatingSystemVersionProvider>();
 
 			Dispatcher.RunAsync(
-				Windows.UI.Core.CoreDispatcherPriority.Normal,
+                global::Windows.UI.Core.CoreDispatcherPriority.Normal,
 				() =>
 			{
 				// Xamarin.FormsMaps.Init(GlobalSettings.BingMapsAPIKey);

@@ -170,7 +170,6 @@
                     </StackLayout>
                 </Grid>
                 <Grid x:Name="ContentPanel"  
-                      TranslationY="1000"           
                       BackgroundColor="{StaticResource BackgroundGrayColor}">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="50" />

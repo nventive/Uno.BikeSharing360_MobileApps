@@ -2,6 +2,7 @@
 using System.Reflection;
 using Microsoft.Extensions.Logging;
 using Uno.Extensions;
+using Windows.UI.Xaml;
 
 namespace BikeSharing.Clients.WASM
 {
@@ -22,7 +23,7 @@ namespace BikeSharing.Clients.WASM
 			ConfigureFilters(LogExtensionPoint.AmbientLoggerFactory);
 #endif
 
-			_a = new BikeSharing.Clients.UWP.App();
+			Application.Start(_ => _a = new BikeSharing.Clients.UWP.App());
 		}
 
 		static void ConfigureFilters(ILoggerFactory factory)
@@ -36,8 +37,8 @@ namespace BikeSharing.Clients.WASM
 						// Generic Xaml events
 						//{ "Windows.UI.Xaml", LogLevel.Debug },
 						// { "Windows.UI.Xaml.Shapes", LogLevel.Debug },
-						{ "Windows.UI.Xaml.VisualStateGroup", LogLevel.Debug },
-						{ "Windows.UI.Xaml.Media", LogLevel.Debug },
+						//{ "Windows.UI.Xaml.VisualStateGroup", LogLevel.Debug },
+						//{ "Windows.UI.Xaml.Media", LogLevel.Debug },
 						//{ "Windows.UI.Xaml.StateTriggerBase", LogLevel.Debug },
 						// { "Windows.UI.Xaml.UIElement", LogLevel.Debug },
 						// { "Windows.UI.Xaml.Setter", LogLevel.Debug },

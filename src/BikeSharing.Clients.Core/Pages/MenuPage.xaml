@@ -5,7 +5,6 @@
              xmlns:behaviors="clr-namespace:BikeSharing.Clients.Core.Behaviors;assembly=BikeSharing.Clients.Core"
              xmlns:controls="clr-namespace:BikeSharing.Clients.Core.Controls;assembly=BikeSharing.Clients.Core"
              xmlns:helpers="clr-namespace:BikeSharing.Clients.Core.Helpers;assembly=BikeSharing.Clients.Core"
-             xmlns:windows="clr-namespace:Windows.UI.Xaml.Controls;assembly=Uno.UI, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null"
              x:Class="BikeSharing.Clients.Core.Pages.MenuPage">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -291,14 +290,6 @@
         <!-- LOG OUT -->
         <Grid  
             Grid.Row="1">
-            <Grid.IsVisible>
-                <helpers:OnCustomPlatform 
-                    x:TypeArguments="x:Boolean"
-                    Android="True"
-                    iOS="True"
-                    WinPhone="True"
-                    Windows="False"/>
-            </Grid.IsVisible>
             <controls:LogoutButton 
                 x:Name="LogoutButton" 
                 HorizontalOptions="StartAndExpand"
@@ -331,10 +322,6 @@
                     WinPhone="False"
                     Windows="True"/>
             </Grid.IsVisible>
-            <windows:Button 
-                    Content="Logout"
-                    Command="{Binding LogoutCommand}">
-            </windows:Button>
         </Grid>
     </Grid>
 </ContentPage>
