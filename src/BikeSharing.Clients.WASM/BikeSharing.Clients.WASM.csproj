@@ -16,7 +16,7 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.TypeScript.Compiler" Version="2.8.3" />
 		<PackageReference Include="Microsoft.TypeScript.MSBuild" Version="2.8.3" />
-		<PackageReference Include="Uno.UI" Version="1.46.214-dev.2563" />
+		<PackageReference Include="Uno.UI" Version="1.46.214-dev.2584" />
 		<PackageReference Include="Uno.Xamarin.Forms" Version="4.1.0-uno.60" />
 		<PackageReference Include="Uno.Wasm.Bootstrap" Version="1.0.0-dev.302" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.1.1" />

@@ -13,7 +13,7 @@
 	<ItemGroup>
 		<PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
 		<PackageReference Include="Unity" Version="4.0.1" />
-		<PackageReference Include="Uno.UI" Version="1.46.214-dev.2563" />
+		<PackageReference Include="Uno.UI" Version="1.46.214-dev.2584" />
 		<PackageReference Include="Uno.Xamarin.Forms" Version="4.1.0-uno.60" />
 	</ItemGroup>
 
