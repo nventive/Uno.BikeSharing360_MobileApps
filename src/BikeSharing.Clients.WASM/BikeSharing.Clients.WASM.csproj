@@ -34,16 +34,20 @@
 		<UpToDateCheckInput Include="WasmScripts\**\*" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Remove="tsconfig.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="tsconfig.json" />
+	</ItemGroup>
+
   <ItemGroup>
 		<LinkerDescriptor Include="LinkerConfig.xml" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <ProjectReference Include="..\BikeSharing.Clients.Core\BikeSharing.Clients.Core.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="wwwroot\" />
 	</ItemGroup>
 
 	<Import Project="..\BikeSharing.Client.Shared\BikeSharing.Client.Shared.projitems" Label="Shared" />
