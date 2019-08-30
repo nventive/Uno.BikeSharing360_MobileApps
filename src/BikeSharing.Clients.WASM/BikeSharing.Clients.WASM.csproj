@@ -36,10 +36,12 @@
 
 	<ItemGroup>
 	  <None Remove="tsconfig.json" />
+	  <None Remove="wwwroot\web.config" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <Content Include="tsconfig.json" />
+	  <Content Include="wwwroot\web.config" />
 	</ItemGroup>
 
   <ItemGroup>
