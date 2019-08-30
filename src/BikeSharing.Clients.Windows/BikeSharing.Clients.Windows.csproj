@@ -132,8 +132,8 @@
     <PackageReference Include="Splat">
       <Version>1.6.2</Version>
     </PackageReference>
-    <PackageReference Include="Uno.Xamarin.Forms">
-      <Version>4.1.0-uno.60</Version>
+    <PackageReference Include="Xamarin.Forms">
+      <Version>4.1.0.709244</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="..\BikeSharing.Client.Shared\BikeSharing.Client.Shared.projitems" Label="Shared" />

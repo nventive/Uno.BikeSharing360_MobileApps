@@ -12,12 +12,12 @@ namespace BikeSharing.Clients.WASM
 
 		public static void Main(string[] args)
 		{
-			Assembly.Load("Xamarin.Forms.Platform.UAP");
-			Assembly.Load("Xamarin.Forms.Platform");
-			Assembly.Load("Xamarin.Forms.Core");
-			Assembly.Load("Xamarin.Forms.Xaml");
+			//Assembly.Load("Xamarin.Forms.Platform.UAP");
+			//Assembly.Load("Xamarin.Forms.Platform");
+			//Assembly.Load("Xamarin.Forms.Core");
+			//Assembly.Load("Xamarin.Forms.Xaml");
 
-			Xamarin.Forms.Internals.Log.Listeners.Add(new Xamarin.Forms.Internals.DelegateLogListener((c, m) => Console.WriteLine(c + ":" + m)));
+            Xamarin.Forms.Internals.Log.Listeners.Add(new Xamarin.Forms.Internals.DelegateLogListener((c, m) => Console.WriteLine(c + ":" + m)));
 
 #if DEBUG
 			ConfigureFilters(LogExtensionPoint.AmbientLoggerFactory);

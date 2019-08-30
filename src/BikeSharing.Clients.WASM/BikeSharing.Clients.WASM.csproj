@@ -17,8 +17,9 @@
 		<PackageReference Include="Microsoft.TypeScript.Compiler" Version="2.8.3" />
 		<PackageReference Include="Microsoft.TypeScript.MSBuild" Version="2.8.3" />
 		<PackageReference Include="Uno.UI" Version="1.46.214-dev.2584" />
-		<PackageReference Include="Uno.Xamarin.Forms" Version="4.1.0-uno.60" />
-		<PackageReference Include="Uno.Wasm.Bootstrap" Version="1.0.0-dev.302" />
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.709244" />
+    <PackageReference Include="Uno.Xamarin.Forms.Platform" Version="4.1.0-uno.65" />
+    <PackageReference Include="Uno.Wasm.Bootstrap" Version="1.0.0-dev.302" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.1.1" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Filter" Version="1.1.1" />
     <DotNetCliToolReference Include="Uno.Wasm.Bootstrap.CLI" Version="1.0.0-dev.300" />
@@ -54,5 +55,13 @@
 			<GeneratedJavascript Remove="@(_removedGenerated)" />
 		</ItemGroup>
 	</Target>
+
+  <Target Name="RemoveOriginalUAPRenderer" BeforeTargets="CoreCompile">
+    <ItemGroup>
+      <_OriginalRefs Include="@(ReferencePathWithRefAssemblies)" Condition="'%(FileName)'=='Xamarin.Forms.Platform.UAP' or '%(FileName)'=='Xamarin.Forms.Platform.iOS' or '%(FileName)'=='Xamarin.Forms.Platform.Android' " />
+      <ReferencePathWithRefAssemblies Remove="@(_OriginalRefs)" />
+    </ItemGroup>
+  </Target>
+
 
 </Project>
