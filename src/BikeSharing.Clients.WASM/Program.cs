@@ -2,6 +2,7 @@
 using System.Reflection;
 using Microsoft.Extensions.Logging;
 using Uno.Extensions;
+using Windows.UI.Xaml;
 
 namespace BikeSharing.Clients.WASM
 {
@@ -11,18 +12,18 @@ namespace BikeSharing.Clients.WASM
 
 		public static void Main(string[] args)
 		{
-			Assembly.Load("Xamarin.Forms.Platform.UAP");
-			Assembly.Load("Xamarin.Forms.Platform");
-			Assembly.Load("Xamarin.Forms.Core");
-			Assembly.Load("Xamarin.Forms.Xaml");
+			//Assembly.Load("Xamarin.Forms.Platform.UAP");
+			//Assembly.Load("Xamarin.Forms.Platform");
+			//Assembly.Load("Xamarin.Forms.Core");
+			//Assembly.Load("Xamarin.Forms.Xaml");
 
-			Xamarin.Forms.Internals.Log.Listeners.Add(new Xamarin.Forms.Internals.DelegateLogListener((c, m) => Console.WriteLine(c + ":" + m)));
+            Xamarin.Forms.Internals.Log.Listeners.Add(new Xamarin.Forms.Internals.DelegateLogListener((c, m) => Console.WriteLine(c + ":" + m)));
 
 #if DEBUG
 			ConfigureFilters(LogExtensionPoint.AmbientLoggerFactory);
 #endif
 
-			_a = new BikeSharing.Clients.UWP.App();
+			Application.Start(_ => _a = new BikeSharing.Clients.UWP.App());
 		}
 
 		static void ConfigureFilters(ILoggerFactory factory)
@@ -36,8 +37,8 @@ namespace BikeSharing.Clients.WASM
 						// Generic Xaml events
 						//{ "Windows.UI.Xaml", LogLevel.Debug },
 						// { "Windows.UI.Xaml.Shapes", LogLevel.Debug },
-						{ "Windows.UI.Xaml.VisualStateGroup", LogLevel.Debug },
-						{ "Windows.UI.Xaml.Media", LogLevel.Debug },
+						//{ "Windows.UI.Xaml.VisualStateGroup", LogLevel.Debug },
+						//{ "Windows.UI.Xaml.Media", LogLevel.Debug },
 						//{ "Windows.UI.Xaml.StateTriggerBase", LogLevel.Debug },
 						// { "Windows.UI.Xaml.UIElement", LogLevel.Debug },
 						// { "Windows.UI.Xaml.Setter", LogLevel.Debug },

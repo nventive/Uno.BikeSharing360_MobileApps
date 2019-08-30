@@ -167,6 +167,8 @@ namespace BikeSharing.Clients.Core.ViewModels
 
         private async void OnSelectItem(MenuItem item)
         {
+            Console.WriteLine("Item selected");
+
             if (item.IsEnabled)
             {
                 object parameter = null;

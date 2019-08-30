@@ -3,9 +3,7 @@
              xmlns:behaviors="clr-namespace:BikeSharing.Clients.Core.Behaviors;assembly=BikeSharing.Clients.Core"
              xmlns:effects="clr-namespace:BikeSharing.Clients.Core.Effects;assembly=BikeSharing.Clients.Core"
              xmlns:helpers="clr-namespace:BikeSharing.Clients.Core.Helpers;assembly=BikeSharing.Clients.Core"
-             x:Class="BikeSharing.Clients.Core.Pages.LoginPage"
-             xmlns:windows="clr-namespace:Windows.UI.Xaml.Controls;assembly=Uno.UI, Version=255.255.255.255, Culture=neutral">
-              <!--xmlns:windows="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows">-->
+             x:Class="BikeSharing.Clients.Core.Pages.LoginPage" >
    <ContentPage.Resources>
         <ResourceDictionary>
 
@@ -169,21 +167,7 @@
                     Text="Sign in"
                     AutomationId="signin"
                     Style="{StaticResource SignInButtonStyle}">
-                    <Button.IsVisible>
-                        <helpers:OnCustomPlatform x:TypeArguments="x:Boolean"
-                                            Android="True"
-                                            iOS="True"
-                                            WinPhone="False"
-                                            Windows="False"/>
-                    </Button.IsVisible>
                 </Button>
-                <!-- Bindable Native Views Directly to XAML -->
-                <windows:Button 
-                    Content="Sign in"
-                    Height="54"
-                    Width="200"
-                    Command="{Binding SignInCommand}"
-                    View.IsEnabled="{Binding IsEnabled}" />
             </StackLayout>
             <StackLayout 
                 Grid.Row="1"

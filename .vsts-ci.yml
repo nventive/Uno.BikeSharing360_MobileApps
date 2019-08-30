@@ -1,8 +1,9 @@
-phases:
-- phase: VS_Latest
-  variables:
-    NUGET_PACKAGES: $(Agent.WorkFolder)\.nuget
-    NUGET_HTTP_CACHE_PATH: $(Agent.WorkFolder)\.nuget-http-cache
+jobs:
+
+- job: VS_Latest
+
+  pool:
+    vmImage: 'vs2017-win2016'
 
   steps:
   - task: GitVersion@3

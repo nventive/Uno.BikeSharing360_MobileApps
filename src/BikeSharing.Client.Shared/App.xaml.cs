@@ -44,7 +44,7 @@ namespace BikeSharing.Clients.UWP
                 this.DebugSettings.EnableFrameRateCounter = true;
             }
 #endif
-            Frame rootFrame = Windows.UI.Xaml.Window.Current.Content as Frame;
+            Frame rootFrame = global::Windows.UI.Xaml.Window.Current.Content as Frame;
 
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
@@ -75,8 +75,8 @@ namespace BikeSharing.Clients.UWP
                     await _windowStatusService.Load();
                 }
 
-				// Place the frame in the current Window
-				Windows.UI.Xaml.Window.Current.Content = rootFrame;
+                // Place the frame in the current Window
+                global::Windows.UI.Xaml.Window.Current.Content = rootFrame;
             }
 
             if (e.PrelaunchActivated == false)
@@ -88,8 +88,8 @@ namespace BikeSharing.Clients.UWP
                     // parameter
                     rootFrame.Navigate(typeof(MainPage), e.Arguments);
                 }
-				// Ensure the current window is active
-				Windows.UI.Xaml.Window.Current.Activate();
+                // Ensure the current window is active
+                global::Windows.UI.Xaml.Window.Current.Activate();
             }
         }
 
