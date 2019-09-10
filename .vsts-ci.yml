@@ -15,14 +15,6 @@ jobs:
         versionSpec: 4.7.0
         checkLatest: false
 
-  - task: NuGetCommand@2
-    inputs:
-      command: restore
-      solution: BikeSharing.Xamarin-UWP.sln
-      selectOrConfig: select
-      includeNuGetOrg: true
-      verbosityRestore: Normal
-
   - task: MSBuild@1
     inputs:
       solution: BikeSharing.Xamarin-UWP.sln
