@@ -16,10 +16,10 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.TypeScript.Compiler" Version="2.8.3" />
 		<PackageReference Include="Microsoft.TypeScript.MSBuild" Version="2.8.3" />
-		<PackageReference Include="Uno.UI" Version="1.46.227-dev.2670" />
-    <PackageReference Include="Xamarin.Forms" Version="4.1.0.709244" />
-    <PackageReference Include="Uno.Xamarin.Forms.Platform" Version="4.1.0-uno.87" />
-    <PackageReference Include="Uno.Wasm.Bootstrap" Version="1.0.0-dev.302" />
+		<PackageReference Include="Uno.UI" Version="1.46.230-dev.2725" />
+    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
+    <PackageReference Include="Uno.Xamarin.Forms.Platform" Version="4.1.0-uno.108" />
+    <PackageReference Include="Uno.Wasm.Bootstrap" Version="1.1.0-dev.319" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.1.1" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Filter" Version="1.1.1" />
     <DotNetCliToolReference Include="Uno.Wasm.Bootstrap.CLI" Version="1.0.0-dev.300" />
