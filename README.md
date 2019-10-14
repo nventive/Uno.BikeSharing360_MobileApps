@@ -98,7 +98,7 @@ This project uses some third-party assets with a license that requires attributi
 
 <img src="Images/Solution.png" alt="BikeRider" Width="300" />
 
-**Rebuild** the solution to get all neccesary **NuGet** packages.
+**Rebuild** the solution to get all necessary **NuGet** packages.
 
 Access to **GlobalSettings.cs** file available in the Portable Class Library to introduce your Azure endpoints and APIs keys.
 
